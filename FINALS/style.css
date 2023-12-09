@@ -1,0 +1,589 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,300;1,400&display=swap');
+
+@font-face {
+    font-family: mySecondFont;
+    src: url('aArigatouGozaimasu.ttf');
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+nav {
+    background: linear-gradient(-45deg, red, rgb(190, 0, 0), rgb(88, 0, 0), #ff0000);
+}
+
+
+nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+nav a:hover {
+    background-color: #000000;
+}
+
+nav li:first-child {
+    margin-right: auto;
+    pointer-events: none;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+
+nav ul li:hover a {
+    background-color: black;
+    color: white;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.123);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.menu-button{
+    display: none;
+}
+
+#home {
+    display: flex;
+    align-items: center;
+    background-image: url(wave.jpg);
+    background-size: cover;
+}
+
+#logo {
+    width: 50%;
+    max-width: 300px; 
+    margin-right: 20px; 
+}
+
+.text-container {
+    order: 1;
+}
+
+@media(max-width: 800px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+       display:block; 
+    }
+}
+@media(max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
+}
+
+/* Menu  */
+#menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    height: 300px;
+}
+
+.menu-section {
+    background-color: #222;
+    border-radius: 20px;
+    padding-top: 10px;
+}
+#menu img {
+    border-radius: 20px;
+}
+
+.menu-item {
+    flex: 1;
+    margin: 0 10px; 
+    padding-left: 15px;
+}
+/* flip sushi */
+.flip-card {
+    background-color: transparent;
+    width: 400px;
+    height: 266px;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: transparent;
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color: #000000;
+    border-radius: 20px;
+    color: white;
+    transform: rotateY(180deg);
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* About */
+ 
+  #about img {
+    border-radius: 20px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  #about {
+    background-image: url(about.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .bg {
+    font-family: 'Poppins';
+    font-weight: 600;
+    color: red;
+    background-color: #000000;
+    padding: 4px;
+    border-radius: 10px;
+  }
+
+  .highlight {
+    font-family: 'Poppins';
+    font-weight: 600;
+    color: red;
+  }
+
+  .bwt p{
+    font-family: 'Poppins';
+    font-weight: 500;
+  }
+
+
+/* FOOTER */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+* {
+  font-family: Open Sans;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  background: #333;
+  height: 50vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-distributed{
+	background: #000000;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+    font-size: 36px;
+    font-weight: 600;
+	font-family: 'Poppins';
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  rgb(255, 0, 0);
+    font-family: 'Poppins';
+    font-weight: 600;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ff0000;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+    font-family: 'Poppins';
+    font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: 300;
+    font-family: 'Poppins';
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+    font-family: 'Poppins';
+	color: #ffffff;
+    font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: 300;
+    font-family: 'Poppins';
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  rgb(255, 0, 0);
+	text-decoration: none;
+    font-family: 'Poppins';
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #ffffff;
+    font-family: 'Poppins';
+	font-size: 13px;
+	font-weight: 300;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ff0000;
+    font-family: 'Poppins';
+	font-size: 14px;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+}
+
+.footer-icons img {
+    max-width: 40px;
+    height: 40px; 
+    border-radius: 10px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+}
+
+.member {
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px; 
+}
+
+.member .name {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: clamp(12px, 13px, 12px);
+}
+
+.member:hover .name {
+    display: block;
+}
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+/* FORM 8 */
+
+ #contact {
+    background-color: darkred;
+ }
+ 
+input[type=text], [type=number], [type=datetime-local], [type=submit], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  button[type=submit] {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Poppins';
+    font-weight: 300;
+  }
+  
+  button[type=submit]:hover {
+    background-color: #ffffff;
+    color: black;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  textarea,
+  input[type="datetime-local"] {
+      font-family: 'Poppins';
+      font-size: 16px;
+      font-weight: 300;
+  }
+  
+  
+  .container {
+    border-radius: 5px;
+    padding: 20px;
+  }
+
+  /* Keep the existing styling for larger screens */
+#home {
+    display: flex;
+    align-items: center;
+    background-image: url(wave.jpg);
+    background-size: cover;
+    padding: 20px;
+}
+
+#logo {
+    width: 50%;
+    max-width: 300px;
+    margin-right: 20px;
+}
+
+.text-container {
+    text-align: center;
+}
+
+
+#resto-name {
+    font-size: 100px;
+}
+
+#tagline {
+    font-size: 24px;
+}
+
+/* New styling for smaller screens (less than 600px) */
+@media (max-width: 600px) {
+    #home {
+        flex-direction: column;
+    }
+
+    #logo {
+        width: 80%; /* Adjust the width as needed for smaller screens */
+        margin: 0 auto; /* Center the logo */
+    }
+
+    #resto-name {
+        font-size: 32px; /* Adjust font size for smaller screens */
+    }
+
+    #tagline {
+        font-size: 19.2px; /* Adjust font size for smaller screens */
+    }
+
+    #about {
+        font-size: 15px;
+        padding: 20px;
+    }
+
+    .menu-section {
+        font-size: 15px;
+        padding: 20px;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    #about {
+        background-image: url(back.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    #about img{
+        width: 93%;
+        height: auto;
+    }
+
+}

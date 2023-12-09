@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="hapon.png">
+        <title>Nihongo-Desu</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            #resto-name {
+                font-family: 'mySecondFont';
+                text-shadow: 1px 1px 2px red, 0 0 25px white, 0 0 5px red;
+            }
+
+            .company {
+                font-family: 'Poppins';
+                font-weight: 600;
+            }
+
+            .headers {
+                font-family: 'mySecondFont';
+            }
+
+            .dash {
+                color: red;
+                font-family: 'mySecondFont';
+            }
+
+            #tagline {
+                font-family: 'Poppins';
+                font-weight: 400;
+                font-style: italic;
+                font-size: 25px;
+                color: white;
+                text-shadow: 1px 1px 2px red, 0 0 25px black, 0 0 5px black;
+            }
+
+            h1 {
+                font-family: 'Poppins';
+                font-weight: 600;
+                font-size: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul class="sidebar">
+              <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>  
+              <li onclick=hideSidebar()><a href="#home">Home</a></li>
+              <li onclick=hideSidebar()><a href="#menu">Menu</a></li>
+              <li onclick=hideSidebar()><a href="#about">About</a></li>   
+              <li onclick=hideSidebar()><a href="#contact">Contact</a></li>  
+            </ul>
+            <ul>
+              <li><b><a class="company" style="color: white;">Nihongo-Desu</a></b></li>  
+              <li class="hideOnMobile"><a href="#home">Home</a></li>
+              <li class="hideOnMobile"><a href="#menu">Menu</a></li> 
+              <li class="hideOnMobile"><a href="#about">About</a></li>  
+              <li class="hideOnMobile"><a href="#contact">Contact</a></li>  
+              <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+        </nav>
+        <script>
+            function showSidebar(){
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'flex'
+            }
+            function hideSidebar(){
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'none'
+            }
+        </script>
+        <div id="home" class="flex-container">
+            <img id="logo" src="sheee.png" alt="logo">
+            <div class="text-container">
+                <h1 id="resto-name">NIHONGO <span class="dash">-</span> DESU</h1>
+                <p id="tagline">We take pride in bringing the flavors of Japan to your plate</p>
+            </div>
+        </div>
+
+    <div class="menu-section">
+        <center><strong><h1 style="color: red;" class="headers">Menu</h1></strong>
+            <br>
+            <div class="bwt">
+        <p style="color: white;">Welcome to <span class="highlight" style="color: red;">Nihongo-Desu</span>, where our menu is a celebration of culinary excellence, blending traditional Japanese flavors with a touch of modern creativity. Immerse yourself in a symphony of tastes as we invite you to explore our three culinary pillars:</p>
+        <br>
+        <div id="menu">
+        <div class="menu-item">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="sushi.jpg" alt="Avatar" style="width:100%;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1 class="headers" style="color: red;">Sushi Roll</h1> 
+                    <br>
+                    <p>Embark on a journey of artfully crafted sushi rolls that elevate the senses. From classic favorites to innovative creations, each roll is a masterpiece, showcasing the freshest ingredients and the skillful precision of our chefs.</p> 
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="menu-item">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="ramen.jpg" alt="Avatar" style="width:100%;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1 class="headers" style="color: red;">Ramen</h1>
+                    <br>
+                    <p>Warm your soul with the comforting embrace of our ramen bowls. Our hearty broths, perfectly textured noodles, and a medley of toppings create a symphony of flavors that capture the essence of Japanese comfort food.</p> 
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="menu-item">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="castella-cake.png" alt="Avatar" style="width:100%;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1 class="headers" style="color: red;">Castella Cake</h1> 
+                    <br>
+                    <p>Indulge your sweet tooth with our exquisite Castella cake. A delicacy with roots in Japanese tradition, our Castella is a perfect blend of lightness and sweetness, delivering a delightful finale to your culinary experience.</p> 
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <br>
+    <p style="color: white;">At <span class="highlight" style="color: red;">Nihongo-Desu</span>, we invite you to savor the harmony of these culinary treasures. Each dish tells a story, and each bite is a journey into the heart of Japanese gastronomy.</p>
+    <br>
+</div>
+</center>
+</div>
+
+
+    <div id="about">
+        <br>
+        <center><h1 class="headers">About</h1></center>
+        <br>
+        <div class="bwt">
+        <center>
+            <p>Discover the essence of Japan at <span class="highlight">Nihongo-Desu</span>, where culinary artistry meets warm hospitality.</p><br>
+            <p>🍣 <span class="bg">Inspired Cuisine:</span> Immerse yourself in the flavors of Japan with our carefully crafted menu, showcasing the best of sushi, ramen, and traditional castella cake.</p><br>
+            <p>🌿 <span class="bg">Dining:</span> We're committed to quality and sustainability, ensuring each dish is a harmonious blend of freshness and responsibility.</p><br>
+            <p>🏮 <span class="bg">Ambiance:</span> Step into a space that celebrates Japanese culture – from traditional art to a welcoming atmosphere, creating a true taste of Japan in Mabini.</p><br>
+            <p>Join us for an unforgettable culinary journey.</p><br>
+        <img src="interior.jfif">
+        </center>
+        </div>
+        <br>
+    </div>
+
+    <div id="contact">
+        <br>
+        <center><h1 class="headers" style="color: rgb(0, 0, 0);">Contact</h1></center>
+        <div class="bwt">
+        <div class="container">
+            <center>
+            <p style="color: white;">Find us at Mabini, Batangas or call us at 09xxxxxxxxx</p><br>
+            <p style="color: white;">We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p><br>
+            <p style="color: white;">Reserve a table, ask for today's special or just send us a message:</p><br>
+            </center>
+                <input type="text" id="fname" name="firstname" placeholder="Name">
+                <input type="number" placeholder="How many people" required name="How many people">
+                <input type="datetime-local" placeholder="Date and time" required name="date" value="2023-12-09T00:00">
+                <textarea id="subject" name="subject" placeholder="Message \ Special Request" style="height:100px"></textarea>
+                <button type="submit" value="Submit">Send Reservation</button>
+        </div>
+        </div>
+    </div>
+    
+        
+<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3>Nihongo <span>- Desu</span></h3>
+
+				<p class="footer-links">
+					<a href="#home" class="link-1">Home</a>
+					
+					<a href="#menu">Menu</a>
+				
+					<a href="#about">About</a>
+				
+					<a href="#contact">Contact</a>
+				</p>
+
+				<p class="footer-company-name">Nihongo-Desu © 2022</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>Poblacion</span> Mabini, Batangas</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>09xxxxxxxxx</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:nihongo-desu05@gmail.com">nihongo-desu05@gmail.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>About the management</span>
+					Meet the culinary visionaries behind Nihongo-Desu. Our dedicated management team combines expertise and passion to bring you an authentic taste of Japan. From meticulous menu curation to ensuring a welcoming atmosphere, we're committed to making your dining experience memorable. 
+                    Arigatou Gozaimasu.
+				</p>
+
+				<div class="footer-icons">
+                    <div class="member" data-name="Sherwin">
+                        <img src="sherwin.jpeg" alt="leader">
+                        <span class="name">Leader:<br>
+                            Sherwin Ryan A. Barraca</span>
+                    </div>
+                    <div class="member" data-name="Jhun">
+                        <img src="jhun.jpg" alt="members">
+                        <span class="name">Jhun-jhun C. Bonado</span>
+                    </div>
+                    <div class="member" data-name="Juliah">
+                        <img src="juliah.jpg" alt="members">
+                        <span class="name">Juliah Denise P. Bantugon</span>
+                    </div>
+                    <div class="member" data-name="Marie">
+                        <img src="marie.jpg" alt="members">
+                        <span class="name">Jay Marie B. Ilo</span>
+                    </div>
+                    <div class="member" data-name="LJ">
+                        <img src="lj.jpg" alt="members">
+                        <span class="name">LJ N. Marasigan</span>
+                    </div>
+                </div>
+                
+
+			</div>
+
+		</footer>
+    </body>
+</html>
